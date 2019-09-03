@@ -45,5 +45,9 @@ app.delete('/', (req, res) => {
 
 // YOUR ROUTES ABOVE THIS COMMENT /////////////
 
-app.listen(3000);
+const port = process.env.PORT || 3000;
+
+var server = app.listen(port, function() {
+  console.log('...listening on', port );
+});
 
